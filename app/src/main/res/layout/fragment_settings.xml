@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Settings" android:textColor="@color/text_main"
+                    android:textSize="20sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="অ্যাপ নিয়ন্ত্রণ" android:textColor="@color/text_muted"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="40dp" android:layout_height="40dp"
+                android:background="@drawable/circle_green_light"
+                android:gravity="center" android:text="⚙️" android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="12dp">
+
+            <!-- App Control -->
+            <TextView style="@style/SectionLabel" android:text="🔕 Focus ও App নিয়ন্ত্রণ"
+                android:layout_marginBottom="8dp"/>
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:paddingBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="App Blocker" android:textColor="@color/text_main"
+                                android:textSize="14sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Focus এর সময় app বন্ধ রাখো" android:textColor="@color/text_muted"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+                        <Switch android:id="@+id/switch_app_blocker"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:checked="false" android:thumbTint="@color/green" android:trackTint="@color/green_light"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/border"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:paddingTop="12dp" android:paddingBottom="8dp"
+                        android:text="ব্লক করার অ্যাপগুলো সিলেক্ট করুন:"
+                        android:textColor="@color/text_main" android:textSize="13sp" android:textStyle="bold"/>
+
+                    <CheckBox android:id="@+id/cb_facebook"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Facebook" android:textSize="13sp" android:checked="true"
+                        android:buttonTint="@color/green"/>
+
+                    <CheckBox android:id="@+id/cb_youtube"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="YouTube" android:textSize="13sp" android:checked="true"
+                        android:buttonTint="@color/green"/>
+
+                    <CheckBox android:id="@+id/cb_instagram"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Instagram" android:textSize="13sp" android:checked="true"
+                        android:buttonTint="@color/green"/>
+
+                    <CheckBox android:id="@+id/cb_messenger"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Messenger" android:textSize="13sp" android:checked="true"
+                        android:buttonTint="@color/green"/>
+
+                    <CheckBox android:id="@+id/cb_tiktok"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="TikTok" android:textSize="13sp" android:checked="true"
+                        android:buttonTint="@color/green"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Reels & Shorts Blocker Card -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🚫 Reels &amp; Shorts Blocker" android:textColor="@color/text_main"
+                                android:textSize="14sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="YouTube Shorts, FB/IG Reels অটোমেটিক বন্ধ করবে" android:textColor="@color/text_muted"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+                        <Switch android:id="@+id/switch_reels_blocker"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:checked="true" android:thumbTint="@color/green" android:trackTint="@color/green_light"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Notifications -->
+            <TextView style="@style/SectionLabel" android:text="🔔 Notification"
+                android:layout_marginBottom="8dp"/>
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+
+                    <!-- Push Notif -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:paddingBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="পুশ বিজ্ঞপ্তি" android:textColor="@color/text_main"
+                                android:textSize="14sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Task reminder পাঠাবে" android:textColor="@color/text_muted"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+                        <Switch android:id="@+id/switch_push_notif" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:checked="true"
+                            android:thumbTint="@color/green" android:trackTint="@color/green_light"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/border"/>
+
+                    <!-- Task Alarm -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:paddingTop="12dp" android:paddingBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="কাজের অ্যালার্ম" android:textColor="@color/text_main"
+                                android:textSize="14sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="শুরুর সময় alarm বাজবে" android:textColor="@color/text_muted"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+                        <Switch android:id="@+id/switch_task_alarm" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:checked="true"
+                            android:thumbTint="@color/green" android:trackTint="@color/green_light"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/border"/>
+
+                    <!-- Daily Summary -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:paddingTop="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="দৈনিক সারসংক্ষেপ" android:textColor="@color/text_main"
+                                android:textSize="14sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="রাত ১০টায় রিপোর্ট" android:textColor="@color/text_muted"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+                        <Switch android:id="@+id/switch_daily_summary" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:checked="false"
+                            android:thumbTint="@color/green" android:trackTint="@color/green_light"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Account -->
+            <TextView style="@style/SectionLabel" android:text="👤 অ্যাকাউন্ট"
+                android:layout_marginBottom="8dp"/>
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+
+                    <!-- Profile -->
+                    <LinearLayout android:id="@+id/row_profile" android:layout_width="match_parent"
+                        android:layout_height="48dp" android:orientation="horizontal"
+                        android:gravity="center_vertical" android:paddingBottom="12dp">
+                        <TextView android:layout_width="36dp" android:layout_height="36dp"
+                            android:background="@drawable/circle_purple_light"
+                            android:gravity="center" android:text="👤" android:textSize="16sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="প্রোফাইল" android:textColor="@color/text_main"
+                                android:textSize="14sp" android:textStyle="bold"/>
+                            <TextView android:id="@+id/tv_profile_name" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="Rafiq Hasan"
+                                android:textColor="@color/text_muted" android:textSize="12sp"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="›" android:textColor="@color/text_light" android:textSize="20sp"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/border"/>
+
+                    <!-- Theme -->
+                    <LinearLayout android:id="@+id/row_theme" android:layout_width="match_parent"
+                        android:layout_height="48dp" android:orientation="horizontal"
+                        android:gravity="center_vertical" android:paddingTop="12dp" android:paddingBottom="12dp">
+                        <TextView android:layout_width="36dp" android:layout_height="36dp"
+                            android:background="@drawable/circle_green_light"
+                            android:gravity="center" android:text="🎨" android:textSize="16sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="থিম" android:textColor="@color/text_main"
+                                android:textSize="14sp" android:textStyle="bold"/>
+                            <TextView android:id="@+id/tv_theme_name" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="সবুজ (Green)"
+                                android:textColor="@color/text_muted" android:textSize="12sp"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="›" android:textColor="@color/text_light" android:textSize="20sp"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/border"/>
+
+                    <!-- PIN -->
+                    <LinearLayout android:id="@+id/row_pin" android:layout_width="match_parent"
+                        android:layout_height="48dp" android:orientation="horizontal"
+                        android:gravity="center_vertical" android:paddingTop="12dp" android:paddingBottom="12dp">
+                        <TextView android:layout_width="36dp" android:layout_height="36dp"
+                            android:background="@drawable/circle_yellow_light"
+                            android:gravity="center" android:text="🔒" android:textSize="16sp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="অ্যাপ লক (PIN)" android:textColor="@color/text_main"
+                                android:textSize="14sp" android:textStyle="bold"/>
+                            <TextView android:id="@+id/tv_pin_status" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="বন্ধ আছে"
+                                android:textColor="@color/text_muted" android:textSize="12sp"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="›" android:textColor="@color/text_light" android:textSize="20sp"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/border"/>
+
+                    <!-- Delete Data -->
+                    <LinearLayout android:id="@+id/row_delete" android:layout_width="match_parent"
+                        android:layout_height="48dp" android:orientation="horizontal"
+                        android:gravity="center_vertical" android:paddingTop="12dp">
+                        <TextView android:layout_width="36dp" android:layout_height="36dp"
+                            android:background="@drawable/circle_red_light"
+                            android:gravity="center" android:text="🗑️" android:textSize="16sp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:layout_marginStart="12dp"
+                            android:text="সব ডেটা মুছুন" android:textColor="@color/red"
+                            android:textSize="14sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="›" android:textColor="@color/red" android:textSize="20sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tasks_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="আজকের Routine"
+                android:textColor="@color/text_main"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_tasks_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10/6 সম্পন্ন"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_green_light"
+            android:gravity="center"
+            android:text="📋"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Filter Chips -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:background="@color/white"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView android:id="@+id/chip_all"
+                style="@style/ChipStyle"
+                android:text="সব"
+                android:backgroundTint="@null"
+                android:background="@drawable/chip_selected_bg"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/chip_morning"
+                style="@style/ChipStyle"
+                android:text="সকাল"
+                android:background="@drawable/chip_default_bg" />
+
+            <TextView android:id="@+id/chip_noon"
+                style="@style/ChipStyle"
+                android:text="দুপুর"
+                android:background="@drawable/chip_default_bg" />
+
+            <TextView android:id="@+id/chip_afternoon"
+                style="@style/ChipStyle"
+                android:text="বিকেল"
+                android:background="@drawable/chip_default_bg" />
+
+            <TextView android:id="@+id/chip_night"
+                style="@style/ChipStyle"
+                android:text="রাত"
+                android:background="@drawable/chip_default_bg" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Task List -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tasks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="6dp" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

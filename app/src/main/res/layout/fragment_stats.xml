@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="সপ্তাহের কর্মক্ষমতা"
+                android:textColor="@color/text_main"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/circle_green_light"
+                android:gravity="center"
+                android:text="📊"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Summary Stat Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/green_light">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <TextView android:id="@+id/tv_stat_total" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="10"
+                            android:textColor="@color/green_dark" android:textSize="26sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="মোট Task" android:textColor="@color/green_dark" android:textSize="11sp" android:textStyle="bold" android:alpha=".7"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/green_light">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <TextView android:id="@+id/tv_stat_completed" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="6"
+                            android:textColor="@color/green_dark" android:textSize="26sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="সম্পন্ন" android:textColor="@color/green_dark" android:textSize="11sp" android:textStyle="bold" android:alpha=".7"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/green_light">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <TextView android:id="@+id/tv_stat_streak" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="6"
+                            android:textColor="@color/green_dark" android:textSize="26sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Streak (দিন)" android:textColor="@color/green_dark" android:textSize="11sp" android:textStyle="bold" android:alpha=".7"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/green_light">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <TextView android:id="@+id/tv_stat_rate" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="85%"
+                            android:textColor="@color/green_dark" android:textSize="26sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="সম্পন্নের হার" android:textColor="@color/green_dark" android:textSize="11sp" android:textStyle="bold" android:alpha=".7"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Bar Chart Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="সাপ্তাহিক Bar Chart" android:textColor="@color/text_main"
+                        android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+                    <LinearLayout
+                        android:id="@+id/bar_chart_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:orientation="horizontal"
+                        android:gravity="bottom"
+                        android:layout_marginBottom="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Streak Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Streak ক্যালেন্ডার" android:textColor="@color/text_main"
+                        android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+                    <LinearLayout
+                        android:id="@+id/streak_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/tv_streak_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="গত ৭ দিনে ৬ দিন সম্পন্ন"
+                        android:textColor="@color/text_muted"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Category Stats Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="বিভাগ অনুযায়ী" android:textColor="@color/text_main"
+                        android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+
+                    <!-- Study -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="📚" android:textSize="16sp" android:layout_marginEnd="8dp"/>
+                        <TextView android:layout_width="80dp" android:layout_height="wrap_content"
+                            android:text="পড়াশোনা" android:textColor="@color/text_main"
+                            android:textSize="13sp" android:textStyle="bold"/>
+                        <ProgressBar
+                            android:id="@+id/pb_study"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progress="90"
+                            android:progressDrawable="@drawable/progress_bar_green"
+                            android:layout_marginEnd="8dp"/>
+                        <TextView android:id="@+id/tv_study_pct" android:layout_width="36dp"
+                            android:layout_height="wrap_content" android:text="90%"
+                            android:textColor="@color/green_dark" android:textSize="12sp" android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <!-- Religion -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🕌" android:textSize="16sp" android:layout_marginEnd="8dp"/>
+                        <TextView android:layout_width="80dp" android:layout_height="wrap_content"
+                            android:text="ধর্মীয়" android:textColor="@color/text_main"
+                            android:textSize="13sp" android:textStyle="bold"/>
+                        <ProgressBar
+                            android:id="@+id/pb_religion"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progress="95"
+                            android:progressDrawable="@drawable/progress_bar_green"
+                            android:layout_marginEnd="8dp"/>
+                        <TextView android:id="@+id/tv_religion_pct" android:layout_width="36dp"
+                            android:layout_height="wrap_content" android:text="95%"
+                            android:textColor="@color/green_dark" android:textSize="12sp" android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <!-- Exercise -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🏃" android:textSize="16sp" android:layout_marginEnd="8dp"/>
+                        <TextView android:layout_width="80dp" android:layout_height="wrap_content"
+                            android:text="ব্যায়াম" android:textColor="@color/text_main"
+                            android:textSize="13sp" android:textStyle="bold"/>
+                        <ProgressBar
+                            android:id="@+id/pb_exercise"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progress="70"
+                            android:progressDrawable="@drawable/progress_bar_green"
+                            android:layout_marginEnd="8dp"/>
+                        <TextView android:id="@+id/tv_exercise_pct" android:layout_width="36dp"
+                            android:layout_height="wrap_content" android:text="70%"
+                            android:textColor="@color/green_dark" android:textSize="12sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View android:layout_width="match_parent" android:layout_height="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

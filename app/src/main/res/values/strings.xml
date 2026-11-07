@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DailyFlow</string>
+
+    <!-- Bottom Nav -->
+    <string name="nav_home">Home</string>
+    <string name="nav_tasks">Tasks</string>
+    <string name="nav_add">যোগ করো</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Home -->
+    <string name="greeting">শুভ সকাল, Salman! 👋</string>
+    <string name="today_date">আজ রবিবার, ৩ মে ২০২৬</string>
+    <string name="today_progress">আজকের অগ্রগতি</string>
+    <string name="focus_mode_on">🔕 Focus Mode চালু আছে</string>
+    <string name="focus_mode_sub">Facebook, YouTube বন্ধ • ৭ PM পর্যন্ত</string>
+    <string name="now_running">⏱ এখন চলছে</string>
+    <string name="current_task">📖 Quran তেলাওয়াত</string>
+    <string name="current_time">৯:৩০ AM – ১০:০০ AM • ৩০ মিনিট বাকি</string>
+    <string name="btn_done">✓ সম্পন্ন</string>
+    <string name="btn_skip">⟶ পরেরটা</string>
+    <string name="upcoming_label">পরবর্তী কাজসমূহ</string>
+
+    <!-- Tasks -->
+    <string name="tasks_title">আজকের Routine</string>
+    <string name="tasks_sub">১০/৬ সম্পন্ন</string>
+
+    <!-- Add Task -->
+    <string name="add_task_title">নতুন Task যোগ করো</string>
+    <string name="add_task_sub">Routine এ নতুন কাজ</string>
+    <string name="label_task_name">কাজের নাম</string>
+    <string name="hint_task_name">যেমন: পড়াশোনা, ব্যায়াম…</string>
+    <string name="label_category">ক্যাটাগরি</string>
+    <string name="label_time">সময়</string>
+    <string name="label_start">শুরু</string>
+    <string name="label_end">শেষ</string>
+    <string name="label_repeat">পুনরাবৃত্তি</string>
+    <string name="label_control">Notification ও Control</string>
+    <string name="btn_save">✓ Task সেভ করো</string>
+
+    <!-- Stats -->
+    <string name="stats_title">আমার পরিসংখ্যান</string>
+    <string name="stats_sub">এই সপ্তাহ</string>
+    <string name="streak_days">🔥 12</string>
+    <string name="completion_rate">85%</string>
+    <string name="weekly_tasks">42</string>
+    <string name="avg_focus">6.2h</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_sub">App নিয়ন্ত্রণ</string>
+
+    <!-- Accessibility Service Description -->
+    <string name="reels_blocker_description">YouTube Shorts, Facebook &amp; Instagram Reels সনাক্ত করে অটোমেটিক বন্ধ রাখার জন্য পারমিশন প্রয়োজন।</string>
+</resources>

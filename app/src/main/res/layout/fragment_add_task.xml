@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="নতুন Task যোগ করো"
+                    android:textColor="@color/text_main"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Routine এ নতুন কাজ"
+                    android:textColor="@color/text_muted"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/circle_green_light"
+                android:gravity="center"
+                android:text="➕"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Form Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Task Name -->
+            <TextView style="@style/LabelStyle" android:text="কাজের নাম" />
+            <EditText
+                android:id="@+id/et_task_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_bg"
+                android:hint="যেমন: Quran তেলাওয়াত"
+                android:textColorHint="@color/text_light"
+                android:textSize="14sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:inputType="textCapSentences"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Category -->
+            <TextView style="@style/LabelStyle" android:text="বিভাগ" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp">
+                <TextView android:id="@+id/chip_cat_study"    style="@style/ChipStyle" android:text="📚 পড়াশোনা"  android:background="@drawable/chip_selected_bg" android:textColor="@android:color/white"/>
+                <TextView android:id="@+id/chip_cat_religion" style="@style/ChipStyle" android:text="🕌 ধর্মীয়"   android:background="@drawable/chip_default_bg" />
+                <TextView android:id="@+id/chip_cat_exercise" style="@style/ChipStyle" android:text="🏃 ব্যায়াম"  android:background="@drawable/chip_default_bg" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <TextView android:id="@+id/chip_cat_work"     style="@style/ChipStyle" android:text="💼 কাজ"     android:background="@drawable/chip_default_bg" />
+                <TextView android:id="@+id/chip_cat_food"     style="@style/ChipStyle" android:text="🍽 খাবার"    android:background="@drawable/chip_default_bg" />
+                <TextView android:id="@+id/chip_cat_sleep"    style="@style/ChipStyle" android:text="😴 ঘুম"     android:background="@drawable/chip_default_bg" />
+                <TextView android:id="@+id/chip_cat_others"   style="@style/ChipStyle" android:text="📌 অন্যান্য" android:background="@drawable/chip_default_bg" />
+            </LinearLayout>
+
+            <!-- Recurrence -->
+            <TextView style="@style/LabelStyle" android:text="পুনরাবৃত্তি" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <TextView android:id="@+id/chip_rec_none"   style="@style/ChipStyle" android:text="✓ কোনো নয়"    android:background="@drawable/chip_selected_bg" android:textColor="@android:color/white"/>
+                <TextView android:id="@+id/chip_rec_daily"  style="@style/ChipStyle" android:text="প্রতিদিন"     android:background="@drawable/chip_default_bg" />
+                <TextView android:id="@+id/chip_rec_weekly" style="@style/ChipStyle" android:text="সাপ্তাহিক"   android:background="@drawable/chip_default_bg" />
+            </LinearLayout>
+
+            <!-- Duration -->
+            <TextView style="@style/LabelStyle" android:text="সময়কাল (মিনিট)" />
+            <EditText
+                android:id="@+id/et_duration"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_bg"
+                android:hint="যেমন: 30"
+                android:textColorHint="@color/text_light"
+                android:textSize="14sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:inputType="number"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Focus Mode -->
+            <LinearLayout
+                android:id="@+id/btn_focus_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/chip_default_bg"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:layout_marginBottom="14dp">
+                <TextView
+                    android:id="@+id/tv_focus_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔕 Focus Mode"
+                    android:textColor="@color/text_muted"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- শুরুর সময় -->
+            <TextView style="@style/LabelStyle" android:text="শুরুর সময়" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/tv_time_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:00 AM"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TimePicker
+                android:id="@+id/time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="clock"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btn_save_task"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:backgroundTint="@color/green"
+                android:text="Task যোগ করুন"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

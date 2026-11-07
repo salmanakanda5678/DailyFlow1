@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Green -->
+    <color name="green">#2ECC71</color>
+    <color name="green_dark">#27AE60</color>
+    <color name="green_light">#E8F8F0</color>
+
+    <!-- Accents -->
+    <color name="purple">#6C5CE7</color>
+    <color name="purple_light">#F0EEFF</color>
+    <color name="orange">#FF6B35</color>
+    <color name="orange_light">#FFF0EB</color>
+    <color name="blue">#0984E3</color>
+    <color name="blue_light">#E8F4FF</color>
+    <color name="red">#E74C3C</color>
+    <color name="red_light">#FEF0EF</color>
+    <color name="yellow">#F1C40F</color>
+    <color name="yellow_light">#FFFBEA</color>
+
+    <!-- Text -->
+    <color name="text_main">#1A1A2E</color>
+    <color name="text_muted">#7F8C8D</color>
+    <color name="text_light">#B2BEC3</color>
+
+    <!-- Backgrounds -->
+    <color name="bg">#F0F4F8</color>
+    <color name="bg_main">#F8FAFC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="card">#FFFFFF</color>
+    <color name="border">#E8ECF0</color>
+    <color name="bottom_nav_color">#5D6D7E</color>
+
+    <!-- Material theme -->
+    <color name="colorPrimary">@color/green</color>
+    <color name="colorPrimaryDark">@color/green_dark</color>
+    <color name="colorAccent">@color/green</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSurface">@color/card</color>
+    <color name="colorOnSurface">@color/text_main</color>
+</resources>
